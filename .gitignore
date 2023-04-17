@@ -6,3 +6,10 @@ crash.log
 
 # For built boxes
 *.box
+
+# ISOs
+*.iso
+
+# Manifest files
+manifest.txt
+manifest.txt.lock
