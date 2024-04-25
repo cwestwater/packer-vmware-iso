@@ -37,8 +37,8 @@ source "vmware-iso" "win2022dc" {
 
   # Removable Media Configuration
 
-  iso_url      = "G:\\Microsoft Evaluations\\Windows Server 2022\\SERVER_EVAL_x64FRE_en-us.iso"
-  iso_checksum = "md5:E7908933449613EDC97E1B11180429D1"
+  iso_url      = var.iso_file_path
+  iso_checksum = var.iso_checksum_value
 
   floppy_files = [
     "../../bootfiles/win2022/datacenter/autounattend.xml",
@@ -65,8 +65,8 @@ source "vmware-iso" "win2022dc" {
   shutdown_command     = "a:\\sysprep.bat"
   shutdown_timeout     = "1h"
   cleanup_remote_cache = true
-  output_directory     = "D:\\Templates\\win2022dc"
-  format               = "ova"
+  output_directory     = "${var.template_path}\\win2022dc"
+  format               = var.template_output_format
 }
 
 source "vmware-iso" "win2022dccore" {
@@ -89,8 +89,8 @@ source "vmware-iso" "win2022dccore" {
 
   # Removable Media Configuration
 
-  iso_url      = "G:\\Microsoft Evaluations\\Windows Server 2022\\SERVER_EVAL_x64FRE_en-us.iso"
-  iso_checksum = "md5:E7908933449613EDC97E1B11180429D1"
+  iso_url      = var.iso_file_path
+  iso_checksum = var.iso_checksum_value
 
   floppy_files = [
     "../../bootfiles/win2022/datacentercore/autounattend.xml",
@@ -117,8 +117,8 @@ source "vmware-iso" "win2022dccore" {
   shutdown_command     = "a:\\sysprep.bat"
   shutdown_timeout     = "1h"
   cleanup_remote_cache = true
-  output_directory     = "D:\\Templates\\win2022dccore"
-  format               = "ova"
+  output_directory     = "${var.template_path}\\win2022dccore"
+  format               = var.template_output_format
 }
 
 source "vmware-iso" "win2022std" {
@@ -141,8 +141,8 @@ source "vmware-iso" "win2022std" {
 
   # Removable Media Configuration
 
-  iso_url      = "G:\\Microsoft Evaluations\\Windows Server 2022\\SERVER_EVAL_x64FRE_en-us.iso"
-  iso_checksum = "md5:E7908933449613EDC97E1B11180429D1"
+  iso_url      = var.iso_file_path
+  iso_checksum = var.iso_checksum_value
 
   floppy_files = [
     "../../bootfiles/win2022/standard/autounattend.xml",
@@ -169,8 +169,8 @@ source "vmware-iso" "win2022std" {
   shutdown_command     = "a:\\sysprep.bat"
   shutdown_timeout     = "1h"
   cleanup_remote_cache = true
-  output_directory     = "D:\\Templates\\win2022std"
-  format               = "ova"
+  output_directory     = "${var.template_path}\\win2022std"
+  format               = var.template_output_format
 }
 
 source "vmware-iso" "win2022stdcore" {
@@ -193,8 +193,8 @@ source "vmware-iso" "win2022stdcore" {
 
   # Removable Media Configuration
 
-  iso_url      = "G:\\Microsoft Evaluations\\Windows Server 2022\\SERVER_EVAL_x64FRE_en-us.iso"
-  iso_checksum = "md5:E7908933449613EDC97E1B11180429D1"
+  iso_url      = var.iso_file_path
+  iso_checksum = var.iso_checksum_value
 
   floppy_files = [
     "../../bootfiles/win2022/standardcore/autounattend.xml",
@@ -221,8 +221,8 @@ source "vmware-iso" "win2022stdcore" {
   shutdown_command     = "a:\\sysprep.bat"
   shutdown_timeout     = "1h"
   cleanup_remote_cache = true
-  output_directory     = "D:\\Templates\\win2022stdcore"
-  format               = "ova"
+  output_directory     = "${var.template_path}\\win2022stdcore"
+  format               = var.template_output_format
 }
 
 build {

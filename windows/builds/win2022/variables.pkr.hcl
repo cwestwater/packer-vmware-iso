@@ -1,3 +1,5 @@
+# VM Hardware Configuration
+
 variable "os_family" {
   description = "The OS Family Name"
   type = string
@@ -58,6 +60,31 @@ variable "vm_disk_type" {
   description = "The type of disk"
   type        = string
   default     = "0"
+}
+
+# Removable Media Configuration
+
+variable "iso_file_path" {
+  description = "The path to the Windows Server 2022 ISO"
+  type        = string
+}
+
+variable "iso_checksum_value" {
+  description = "The path to the the Windows Server 2022 ISO"
+  type        = string
+}
+
+# Build Settings
+
+variable "template_path" {
+  description = "The path to place the template"
+  type        = string
+}
+
+variable "template_output_format" {
+  description = "The format of the template to output - ovf, ova or vmx"
+  type        = string
+  default     = "ova"
 }
 
 locals {
