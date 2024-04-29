@@ -1,4 +1,4 @@
-# HashiCorp Packer with VMware Workstation to build Windows Server Images on vCenter
+# HashiCorp Packer with VMware Workstation to build Windows Server Images
 
 This repo hosts a set of files to build Windows Server 2022 Operating Systems in a VMware vSphere environment using [HashiCorp Packer](https://www.packer.io/) using the [vmware-iso](https://developer.hashicorp.com/packer/integrations/hashicorp/vmware/latest/components/builder/iso) builder.
 
